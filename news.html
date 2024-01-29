@@ -79,11 +79,91 @@
 <section id="portfolio">
 	<div class="container-fluid animatedParent">
 		<div class="animated bounceInUp slowest">
+			<div id="container_hz_0" style="margin-left:50px; margin-right:50px">
+				
+				<h3 align="middle">2024</h4>
+                <div style="background-color: white; width: 100%; height: 20pt;"></div>
+				
+				<div class="col-md-3 col-sm-6 portfolio-item mix category-1" data-value="1" style="width:235px">
+					<a href="" class="portfolio-link">
+						<div class="portfolio-hover">
+							<div class="portfolio-hover-content">
+								<h4>Hao Zheng</h4>
+                                <p>is giving a lecture in Nanchang University</p>
+							</div>
+						</div>
+						<img src="images/portfolio/nanchang2024.jpg" class="img-responsive" alt="">
+					</a>
+				</div>
+				<div class="col-md-3 col-sm-6 portfolio-item mix category-1" data-value="1" style="width:235px">
+					<a href="" class="portfolio-link">
+						<div class="portfolio-hover">
+							<div class="portfolio-hover-content">
+								<h4>Hao Zheng</h4>
+                                <p>is giving a lecture in Southeast University</p>
+							</div>
+						</div>
+						<img src="images/portfolio/su2024.jpg" class="img-responsive" alt="">
+					</a>
+				</div>
+				<div class="col-md-3 col-sm-6 portfolio-item mix category-1" data-value="1" style="width:235px">
+					<a href="" class="portfolio-link">
+						<div class="portfolio-hover">
+							<div class="portfolio-hover-content">
+								<h4>Hao Zheng</h4>
+                                <p>is giving a lecture in Huaqiao University</p>
+							</div>
+						</div>
+						<img src="images/portfolio/huaqiao2024.jpg" class="img-responsive" alt="">
+					</a>
+				</div>
+				<div class="col-md-3 col-sm-6 portfolio-item mix category-1" data-value="1" style="width:235px">
+					<a href="" class="portfolio-link">
+						<div class="portfolio-hover">
+							<div class="portfolio-hover-content">
+								<h4>Hao Zheng</h4>
+                                <p>is giving a lecture in Fujian University of Technology</p>
+							</div>
+						</div>
+						<img src="images/portfolio/fjut2024.jpg" class="img-responsive" alt="">
+					</a>
+				</div>
+				<div class="col-md-3 col-sm-6 portfolio-item mix category-1" data-value="1" style="width:235px">
+					<a href="" class="portfolio-link">
+						<div class="portfolio-hover">
+							<div class="portfolio-hover-content">
+								<h4>Hao Zheng</h4>
+                                <p>is giving a lecture in Hefei University of Technology</p>
+							</div>
+						</div>
+						<img src="images/portfolio/hut2024.jpg" class="img-responsive" alt="">
+					</a>
+				</div>
+								
+            </div>
+		</div>
+	</div>
+</section>
+
+<section id="portfolio">
+	<div class="container-fluid animatedParent">
+		<div class="animated bounceInUp slowest">
 			<div id="container_hz_1" style="margin-left:50px; margin-right:50px">
 				
 				<h3 align="middle">2023</h4>
                 <div style="background-color: white; width: 100%; height: 20pt;"></div>
 				
+				<div class="col-md-3 col-sm-6 portfolio-item mix category-1" data-value="1" style="width:235px">
+					<a href="" class="portfolio-link">
+						<div class="portfolio-hover">
+							<div class="portfolio-hover-content">
+								<h4>Hao Zheng</h4>
+                                <p>is giving a lecture in CUHK</p>
+							</div>
+						</div>
+						<img src="images/portfolio/cuhk2023.jpg" class="img-responsive" alt="">
+					</a>
+				</div>
 				<div class="col-md-3 col-sm-6 portfolio-item mix category-1" data-value="1" style="width:235px">
 					<a href="" class="portfolio-link">
 						<div class="portfolio-hover">
@@ -764,7 +844,7 @@
 			    <span> <em>Architectural Intelligence Group, Department of Architecture and Civil Engineering, City University of Hong Kong</em></span>
 			</div>
 			<div class="col-md-12">
-				<span class="copyright"> <em>Copyright &copy; 2015-2023. AIG All rights reserved.</em></span>
+				<span class="copyright"> <em>Copyright &copy; 2015-2024. AIG All rights reserved.</em></span>
 			</div>
 		</div>
 	</div>
@@ -811,6 +891,8 @@
 <script language="javascript">
 	var ih = window.innerWidth;
 	var ihh = (ih-50-50)%(235+10)/2;
+	document.getElementById("container_hz_0").style.marginLeft = (ihh+50).toString()+"px";
+	document.getElementById("container_hz_0").style.marginRight = (ihh+50).toString()+"px";
 	document.getElementById("container_hz_1").style.marginLeft = (ihh+50).toString()+"px";
 	document.getElementById("container_hz_1").style.marginRight = (ihh+50).toString()+"px";
 	document.getElementById("container_hz_2").style.marginLeft = (ihh+50).toString()+"px";
@@ -824,6 +906,8 @@
     window.onresize = function(){
 		var ih = window.innerWidth;
 		var ihh = (ih-50-50)%(235+10)/2;
+		document.getElementById("container_hz_0").style.marginLeft = (ihh+50).toString()+"px";
+		document.getElementById("container_hz_0").style.marginRight = (ihh+50).toString()+"px";
 		document.getElementById("container_hz_1").style.marginLeft = (ihh+50).toString()+"px";
 		document.getElementById("container_hz_1").style.marginRight = (ihh+50).toString()+"px";
 		document.getElementById("container_hz_2").style.marginLeft = (ihh+50).toString()+"px";
