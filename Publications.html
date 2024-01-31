@@ -35,31 +35,11 @@
 <header>
 	<!-- Navigation -->
 	<nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
-		<div class="container">
-			<!-- Brand and toggle get grouped for better mobile display -->
-			<div class="navbar-header page-scroll">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-					<span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
-				</button>
-				<a style="display: none" class="navbar-brand page-scroll" href="#page-top"><img src="images/logos/logo.png" alt=""></a>
-			</div>
-
-			<!-- Collect the nav links, forms, and other content for toggling -->
-			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-				<ul class="nav navbar-nav text-center">
-					<li class="logo-holder">                        
-						<a href="index.html"><img src="images/logos/logo.png" alt=""></a>
-					</li>
-					<li><a href="news.html">News</a></li>
-					<li><a href="Members.html">Members</a></li>
-					<li><a href="Publications.html">Publications</a></li>
-					<li><a href="teaching.html">Teaching</a></li>
-					<li><a href="contact.html">About Us</a></li>
-				</ul>
-			</div>
-			<!-- /.navbar-collapse -->
-		</div>
-		<!-- /.container-fluid -->
+		<div class="container-head"></div>
+		<script src="js/jquery-3.4.1.min.js"></script>
+		<script type="text/javascript">
+			$(".container-head").load('header.html');
+		</script>
 	</nav>
 	<div id="page_header">
 		<div class="page_title">
@@ -739,21 +719,11 @@
 
 
 <footer id="footer">
-	<div class="container">
-		<div class="row">
-			<li class="logo-holder">                        
-				<a href="https://www.cityu.edu.hk/"><img src="images/logos/cityu.png" alt="" height="100px"></a>
-			</li>
-		</div>
-		<div class="row">
-			<div class="col-md-12">
-			    <span> <em>Architectural Intelligence Group, Department of Architecture and Civil Engineering, City University of Hong Kong</em></span>
-			</div>
-			<div class="col-md-12">
-				<span class="copyright"> <em>Copyright &copy; 2015-2024. AIG All rights reserved.</em></span>
-			</div>
-		</div>
-	</div>
+	<div class="container-foot"></div>
+	<script src="js/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript">
+		$(".container-foot").load('footer.html');
+	</script>
 </footer>
 
 
