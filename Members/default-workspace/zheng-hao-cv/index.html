@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Hao Zheng · Interactive CV & Life Candlestick | 郑豪</title>
+<meta name="description" content="Hao Zheng, Assistant Professor at City University of Hong Kong — an interactive academic CV covering education, appointments, grants, publications, patents, teaching and invited talks, plus an animated life-trajectory candlestick chart. 可一键切换中文。" />
+<link rel="stylesheet" href="assets/styles.css" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b1020'/%3E%3Ctext x='32' y='44' font-size='30' text-anchor='middle' fill='%23f5c86b' font-family='serif'%3EHZ%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+<div class="bg-grid" aria-hidden="true"></div>
+<div class="bg-aurora" aria-hidden="true"></div>
+
+<header class="topbar">
+  <div class="brand">
+    <div class="brand-mark" id="brand-mark">HZ</div>
+    <div class="brand-text">
+      <div class="brand-name" id="brand-name">Hao ZHENG <span>郑豪</span></div>
+      <div class="brand-sub" data-i18n="brandSub">City University of Hong Kong · Architecture and Civil Engineering · Assistant Professor</div>
+    </div>
+  </div>
+  <div class="topbar-right">
+    <div class="lang-switch" role="group" aria-label="Language / 语言">
+      <button data-lang-btn="zh" title="中文">中</button>
+      <button data-lang-btn="en" title="English">EN</button>
+    </div>
+    <div class="theme-switch" role="group" aria-label="Theme">
+      <button data-theme-btn="dark" data-i18n-title="themeDark" title="Dark">◐</button>
+      <button data-theme-btn="light" data-i18n-title="themeLight" title="Light">☀</button>
+    </div>
+    <a class="topbar-link" href="https://www.architecturalintelligence.group/" target="_blank" rel="noopener">AIG ↗</a>
+  </div>
+</header>
+
+<nav class="tabs" id="tabs" role="tablist" aria-label="CV sections"></nav>
+
+<main id="main">
+  <section class="panel" id="panel-overview" role="tabpanel"></section>
+
+  <!-- ============ Journey / 人生 K 线 ============ -->
+  <section class="panel" id="panel-journey" role="tabpanel">
+    <div class="journey-head">
+      <div class="jh-left">
+        <div class="jh-eyebrow"><span class="dot-live"></span> <span data-i18n="journeyEyebrow">Life Trajectory · 2009 — 2031</span></div>
+        <h2 data-i18n="journeyTitle">Life Candlestick · A Timeline Narrative</h2>
+        <p data-i18n="journeyDesc">One candle per year: the open is the state at the start of the year, the close is where the year’s output left it, and the wicks come from how events were distributed across the months. Red = up, green = down; 2027 onward is the model’s forecast.</p>
+      </div>
+      <div class="jh-controls">
+        <button id="btn-prev" class="ctrl-btn" data-i18n-title="tipPrev"><span class="ico" aria-hidden="true">◀</span> <span data-i18n="prev">Previous</span></button>
+        <button id="btn-play" class="ctrl-btn ctrl-play" data-i18n-title="tipPlay"><span class="ico">▶</span> <span data-i18n="play">Auto play</span></button>
+        <button id="btn-next" class="ctrl-btn" data-i18n-title="tipNext"><span data-i18n="next">Next</span> <span class="ico" aria-hidden="true">▶</span></button>
+        <span class="ctrl-sep"></span>
+        <select id="speed" class="ctrl-select" data-i18n-title="tipSpeed">
+          <option value="0.7" data-i18n="speed07">0.7× slow</option>
+          <option value="1" selected data-i18n="speed10">1.0× normal</option>
+          <option value="1.5" data-i18n="speed15">1.5× fast</option>
+          <option value="2.2" data-i18n="speed22">2.2× fastest</option>
+        </select>
+        <button id="btn-full" class="ctrl-btn ctrl-ghost" data-i18n-title="tipFocus"><span data-i18n="focusAuto">Focus: auto</span></button>
+        <button id="btn-replay" class="ctrl-btn ctrl-ghost" data-i18n-title="tipReplay">↻ <span data-i18n="replay">Redraw K-line</span></button>
+      </div>
+    </div>
+
+    <div class="journey-stage">
+      <div class="chart-card">
+        <div class="chart-top">
+          <div class="chart-title"><span data-i18n="chartTitle">Life Index</span> <b id="step-label">—</b></div>
+          <div class="chart-sub" data-i18n="chartSub">Index = growth baseline (13.5% p.a.) × yearly output intensity</div>
+        </div>
+        <div class="chart-canvas-wrap">
+          <canvas id="kline"></canvas>
+          <div class="chart-tip" id="chart-tip"></div>
+        </div>
+      </div>
+      <aside class="journey-side">
+        <article class="event-card" id="event-card" data-cat="award"></article>
+        <div class="year-summary">
+          <div class="ys-head"><span data-i18n="ysHead">Year File</span><b id="ys-year">—</b></div>
+          <div id="ys-body" class="ys-body"></div>
+        </div>
+      </aside>
+    </div>
+
+    <div class="timeline-card">
+      <div class="tl-head">
+        <div class="tl-title"><span data-i18n="timelineTitle">Timeline</span> <em>2009 — 2031</em></div>
+        <div class="tl-legend">
+          <span><i class="lg c-sci"></i><span data-i18n="lgPapers">Papers</span></span>
+          <span><i class="lg c-pat"></i><span data-i18n="lgPatents">Patents</span></span>
+          <span><i class="lg c-talk"></i><span data-i18n="lgTalks">Talks</span></span>
+          <span><i class="lg c-role"></i><span data-i18n="lgRoles">Roles</span></span>
+          <span><i class="lg c-proj"></i><span data-i18n="lgProjects">Grants</span></span>
+        </div>
+        <div class="tl-progress-wrap">
+          <div class="tl-progress"><div id="step-progress"></div></div>
+          <span id="step-count">1 / 24</span>
+        </div>
+      </div>
+      <div class="tl-scroll" id="tl-scroll"><div class="tl-track" id="tl-track"></div></div>
+      <div class="step-dots" id="step-dots"></div>
+      <div class="tl-foot" data-i18n="tlFoot">Click a year for its file · click a dot to jump · ← → to step · space to play/pause</div>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-education" role="tabpanel"></section>
+  <section class="panel" id="panel-work" role="tabpanel"></section>
+  <section class="panel" id="panel-projects" role="tabpanel"></section>
+  <section class="panel" id="panel-papers" role="tabpanel"></section>
+  <section class="panel" id="panel-patents" role="tabpanel"></section>
+  <section class="panel" id="panel-awards" role="tabpanel"></section>
+  <section class="panel" id="panel-teaching" role="tabpanel"></section>
+  <section class="panel" id="panel-service" role="tabpanel"></section>
+  <section class="panel" id="panel-talks" role="tabpanel"></section>
+</main>
+
+<footer class="foot">
+  <div data-i18n="footSource">Source: Hao Zheng’s CV (PDF, 21 pages, Nov 2026) · 84 publications / 122 talks / 13 projects entered one by one</div>
+  <div class="foot-sub" data-i18n="footNote">The K-line index is a visualization model, not financial data; the forecast extrapolates historical output trends for narrative purposes only.</div>
+</footer>
+
+<script src="assets/data.js"></script>
+<script src="assets/data2.js"></script>
+<script src="assets/data-en.js"></script>
+<script src="assets/model.js"></script>
+<script src="assets/kline.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
