@@ -334,7 +334,7 @@ window.CV_EN = (function () {
     { year: 2026, month: 8, cat: 'award', kicker: 'International Recognition', title: 'Silver Medal + RIVA Special Award, Silicon Valley', desc: 'The wind- and thermal-driven ventilation cavity design system won two awards at the Silicon Valley International Invention Festival.', dur: 3000 },
     { year: 2026, month: 10, cat: 'award', kicker: 'The Summit', title: 'Stanford/Elsevier World’s Top 2% Scientists', desc: 'Named among the World’s Top 2% Scientists (Single-Year 2026), with 14 papers — a personal record — in the same year.', dur: 3600 },
     { year: 2027, month: 1, cat: 'project', kicker: 'Future · Awarded', title: 'UGC Early Career Scheme (HKD 954k) begins', desc: 'Nature-inspired design of high-performance building cantilever structures, 01/2027–12/2029, plus HKD 47.7k in internal RGC matching funds.', dur: 3200 },
-    { year: 2029, month: 6, cat: 'future', kicker: 'Forecast', title: 'First fully-supervised PhD graduates · team scales up', desc: 'The model projects a compounding phase: 14–18 papers per year, ~20 patents in total and ~CNY 9M in cumulative funding.', dur: 3000 },
+    { year: 2029, month: 6, cat: 'future', kicker: 'Forecast', title: 'All current fully-supervised PhD graduates · team scales up', desc: 'The model projects a compounding phase: 14–18 papers per year, ~20 patents in total and ~CNY 9M in cumulative funding.', dur: 3000 },
     { year: 2031, month: 12, cat: 'future', kicker: 'Forecast', title: 'An international leader in architectural intelligence', desc: 'Projected: AIG and the AI Fabrication Lab anchor a complete research portfolio — generative design, intelligent construction, urban computing.', dur: 3200 }
   ];
 

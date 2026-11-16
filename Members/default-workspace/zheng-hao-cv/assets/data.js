@@ -369,7 +369,7 @@ window.CV = (function () {
     { year: 2026, month: 8, cat: 'award', kicker: '国际认可', title: '硅谷国际发明展 银奖 + RIVA 特别奖', desc: '风热双驱动拔风腔体智能辅助设计系统等成果获国际发明展双奖。', dur: 3000 },
     { year: 2026, month: 10, cat: 'award', kicker: '巅峰时刻', title: '入选斯坦福/爱思唯尔 全球前 2% 顶尖科学家', desc: '2026 年度全球前 2% 科学家（Single Year 2026）；当年发表 14 篇论文，创历史新高。', dur: 3600 },
     { year: 2027, month: 1, cat: 'project', kicker: '未来 · 已立项', title: 'UGC 杰出青年学者计划（ECS）95.4 万 HKD 启动', desc: 'Nature-inspired design of high-performance building cantilever structures，2027.01–2029.12；配套校内 RGC 基金 4.77 万 HKD。', dur: 3200 },
-    { year: 2029, month: 6, cat: 'future', kicker: '预测', title: '首位完整培养博士生毕业 · 团队规模化', desc: '模型预测：2029 年前后进入成果复利期，年度论文稳定 14–18 篇，专利累计约 20 项，经费累计约 900 万元。', dur: 3000 },
+    { year: 2029, month: 6, cat: 'future', kicker: '预测', title: '现有所有博士生毕业 · 团队规模化', desc: '模型预测：2029 年前后进入成果复利期，年度论文稳定 14–18 篇，专利累计约 20 项，经费累计约 900 万元。', dur: 3000 },
     { year: 2031, month: 12, cat: 'future', kicker: '预测', title: '建筑智能领域的国际引领者', desc: '预测：以 AIG + AI 建造实验室为枢纽，形成“生成式设计—智能建造—城市计算”完整研究版图。', dur: 3200 }
   ];
 
